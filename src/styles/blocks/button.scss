@@ -1,0 +1,22 @@
+@use "../utils/utils" as *;
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.2rem;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-family: inherit;
+  color: $mainWhite;
+  font-size: inherit;
+  width: fit-content;
+
+  &--cyan {
+    background-color: $cyan;
+  }
+
+  &--coral {
+    background-color: $coral;
+  }
+}

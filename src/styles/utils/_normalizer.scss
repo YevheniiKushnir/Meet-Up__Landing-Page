@@ -1,10 +1,11 @@
 @use "./vars" as *;
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 html {
   background-color: $mainWhite;
   color: $mainBlack;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
-  font-weight: normal;
+  font-weight: 600;
+  min-width: 390px;
 }

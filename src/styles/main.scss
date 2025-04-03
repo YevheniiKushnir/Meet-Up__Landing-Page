@@ -1,1 +1,8 @@
 @use "./utils/utils" as *;
+
+@use "./blocks/container.scss";
+@use "./blocks/mainPage.scss";
+@use "./blocks/button.scss";
+@use "./blocks/header.scss";
+@use "./blocks/nav.scss";
+@use "./blocks/events.scss";

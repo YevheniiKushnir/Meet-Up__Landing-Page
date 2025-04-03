@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="mainPage">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,5 +8,60 @@
   <link rel="icon" href="./src/assets/icons/logo/meetup.svg" />
   <link rel="stylesheet" href="./src/styles/main.css" />
   <script src="./src/scripts/index.js" defer></script>
-  <body></body>
+  <body class="mainPage__body">
+    <header class="mainPage__header header">
+      <nav class="header__nav nav">
+        <a href="/" class="nav__logo">
+          <img src="./src/assets/icons/logo/meetup.svg" alt="Meet Up Logo" />
+        </a>
+        <div class="nav__inputs">
+          <input
+            type="text"
+            id="inputEvent"
+            class="nav__search"
+            placeholder="Search events"
+            autocomplete="off"
+          />
+          <input
+            type="text"
+            id="inputCity"
+            class="nav__search"
+            value="Mountain View, CA"
+            autocomplete="off"
+          />
+          <button id="searchForEvents"></button>
+        </div>
+        <div class="nav__controls">
+          <button class="nav__language nav__btn" id="language">English</button>
+          <button class="nav__logIn nav__btn" id="logIn">Log In</button>
+          <button class="nav__signUp button button--cyan" id="signUp">
+            Sign Up
+          </button>
+        </div>
+      </nav>
+      <div class="container">
+        <div class="header__content">
+          <h1 class="header__title">
+            The people platform—Where interests become friendships
+          </h1>
+          <p class="header__text">
+            Whatever your interest, from hiking and reading to networking and
+            skill sharing, there are thousands of people who share it on Meetup.
+            Events are happening every day—sign up to join the fun.
+          </p>
+          <button class="header__button button button--cyan">
+            Join Meetup
+          </button>
+          <img
+            src="./src/assets/imgs/header/header-deco.png"
+            alt="Decorative picture"
+            class="header__deco"
+          />
+        </div>
+      </div>
+    </header>
+    <main class="pageMain__main main">
+      <section class="main__events events"></section>
+    </main>
+  </body>
 </html>

@@ -1,0 +1,91 @@
+@use "../utils/utils" as *;
+
+.header {
+  &__nav {
+    margin-bottom: 30px;
+
+    @include onTablet {
+      margin-bottom: 60px;
+    }
+
+    @include onDesktop {
+      margin-bottom: 88px;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-areas:
+      "title"
+      "text"
+      "button"
+      "deco";
+    row-gap: 20px;
+
+    @include onTablet {
+      grid-template-areas:
+        "title deco"
+        "text deco"
+        "button deco";
+      row-gap: 24px;
+      column-gap: 20px;
+    }
+
+    @include onDesktop {
+      column-gap: 54px;
+    }
+  }
+
+  &__title {
+    grid-area: title;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+
+    @include onTablet {
+      font-size: 2rem;
+      line-height: 2rem;
+    }
+
+    @include onDesktop {
+      font-size: 3rem;
+      line-height: 3.2rem;
+    }
+  }
+
+  &__text {
+    grid-area: text;
+    font-weight: 400;
+
+    font-size: 0.75rem;
+    line-height: 1.5rem;
+
+    @include onTablet {
+      font-size: 1rem;
+    }
+  }
+
+  &__button {
+    grid-area: button;
+    display: none;
+    @include transition;
+
+    @include onTablet {
+      display: flex;
+    }
+    @include hoverEffectBtn($cyan);
+    @include activeEffectBtn($cyan);
+  }
+
+  &__deco {
+    grid-area: deco;
+    justify-self: center;
+    max-width: 214px;
+    margin-top: -30px;
+
+    @include onTablet {
+      max-width: 380px;
+      margin-top: 0;
+    }
+  }
+}

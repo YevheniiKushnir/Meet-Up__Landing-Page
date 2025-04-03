@@ -1,0 +1,11 @@
+@use "../utils/utils" as *;
+
+.mainPage {
+  &__header {
+    margin-bottom: 24px;
+
+    @include onDesktop {
+      margin-bottom: 120px;
+    }
+  }
+}

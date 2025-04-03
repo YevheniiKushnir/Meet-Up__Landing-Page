@@ -1,0 +1,19 @@
+@use "../utils/utils" as *;
+
+.container {
+  padding-inline: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+  box-sizing: content-box;
+
+  @include onTablet {
+    padding-inline: 40px;
+  }
+  @include onDesktop {
+    padding-inline: 100px;
+  }
+
+  @include onLargeDesktop {
+    padding-inline: 160px;
+  }
+}

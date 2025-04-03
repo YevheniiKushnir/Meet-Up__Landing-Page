@@ -1,0 +1,40 @@
+@mixin transition(
+  $property: all,
+  $time: 0.3s,
+  $timing-function: ease,
+  $delay: 0s
+) {
+  transition: $property $time $timing-function $delay;
+}
+
+@mixin hoverEffectBtn($color) {
+  &:hover {
+    background-color: darken($color, 10%);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+}
+@mixin activeEffectBtn($color) {
+  &:active {
+    background-color: darken($color, 15%);
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@mixin onTablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin onDesktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin onLargeDesktop {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}
