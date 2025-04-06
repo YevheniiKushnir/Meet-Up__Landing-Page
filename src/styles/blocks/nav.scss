@@ -1,8 +1,5 @@
 @use "../utils/utils" as *;
 
-$inputHeight: 42px;
-$borderRadiusInput: 8px;
-
 .nav {
   display: grid;
   width: 100%;
@@ -72,8 +69,8 @@ $borderRadiusInput: 8px;
       }
 
       &:first-child {
-        border-top-left-radius: $borderRadiusInput;
-        border-bottom-left-radius: $borderRadiusInput;
+        border-top-left-radius: $borderRadius;
+        border-bottom-left-radius: $borderRadius;
 
         padding-left: 38px;
         background-image: url("../assets/icons/nav/search-grey.svg");
@@ -94,8 +91,8 @@ $borderRadiusInput: 8px;
       height: $inputHeight;
       aspect-ratio: 1/1;
       background-color: $coral;
-      border-top-right-radius: $borderRadiusInput;
-      border-bottom-right-radius: $borderRadiusInput;
+      border-top-right-radius: $borderRadius;
+      border-bottom-right-radius: $borderRadius;
       @include transition;
 
       display: flex;
@@ -110,7 +107,6 @@ $borderRadiusInput: 8px;
       }
 
       @include hoverEffectBtn($coral);
-      @include activeEffectBtn($coral);
     }
   }
 
@@ -133,25 +129,7 @@ $borderRadiusInput: 8px;
     align-items: center;
     font-size: inherit;
     background-color: transparent;
-    position: relative;
-
-    &::after {
-      content: "";
-      height: 2px;
-      width: 0;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      background-color: $cyan;
-      border-radius: 5px;
-      @include transition;
-    }
-
-    &:hover {
-      &::after {
-        width: 100%;
-      }
-    }
+    @include hoverEffectLink($cyan);
   }
 
   &__language {
@@ -168,6 +146,7 @@ $borderRadiusInput: 8px;
   }
 
   &__signUp {
+    height: 36px;
     @include transition;
     @include hoverEffectBtn($cyan);
     @include activeEffectBtn($cyan);

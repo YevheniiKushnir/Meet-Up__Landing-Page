@@ -1,4 +1,86 @@
-export const eventsStore = [
+const eventsStore = [
+  {
+    title: "Day Trading Idea and Strategy",
+    description: "Business",
+    date: new Date(2024, 2, 18, 19, 0), // Mar 18, 7:00 PM
+    image: "../assets/imgs/events/day-tranding-stategy.png",
+    type: "offline",
+    attendees: 1,
+    category: "Business",
+    distance: 5,
+  },
+  {
+    title: "Let's Talk Networking: JPMorgan Chase in Palo Alto",
+    description: "Business",
+    date: new Date(2024, 2, 19, 17, 0),
+    image: "../assets/imgs/events/lets-talk-networking.png",
+    type: "offline",
+    attendees: 41,
+    category: "Business",
+    distance: 25,
+  },
+  {
+    title:
+      "Tech Talks & Quiz: Next- Gen Database Solutions for Emerging Use Cases",
+    description: "Technology",
+    date: new Date(2024, 2, 13, 18, 0),
+    image: "../assets/imgs/events/tech-talks.png",
+    type: "online",
+    attendees: 40,
+    category: "Technology",
+    distance: null,
+  },
+  {
+    title: "INFORMS San Francisco Chapter In-Person Event",
+    description: "Health and Wellbeing",
+    date: new Date(2024, 2, 28, 17, 0),
+    image: "../assets/imgs/events/informs-sf.png",
+    type: "offline",
+    attendees: 41,
+    category: "Health and Wellbeing",
+    distance: 50,
+  },
+  {
+    title: "AI Wednesdays - Meet and Greet!",
+    description: "Technology",
+    date: new Date(2024, 2, 13, 18, 30),
+    image: "../assets/imgs/events/meet-and-greet.png",
+    type: "offline",
+    attendees: 29,
+    category: "Technology",
+    distance: 5,
+  },
+  {
+    title: "ROS By-The-Bay March 2024",
+    description: "Social Activities",
+    date: new Date(2024, 2, 21, 18, 0),
+    image: "../assets/imgs/events/ros-by-the-bay.png",
+    type: "online",
+    attendees: 51,
+    category: "Social Activities",
+    distance: null,
+  },
+  {
+    title: "Free Christian Singles' Dinner",
+    description: "Hobbies and Passions",
+    date: new Date(2024, 2, 29, 18, 0),
+    image: "../assets/imgs/events/christian-dinner.png",
+    type: "offline",
+    attendees: 11,
+    category: "Hobbies and Passions",
+    distance: 10,
+  },
+  {
+    title: "In-person: Deep Dive into RAG Architectures (Food served)",
+    description: "Hobbies and Passions",
+    date: new Date(2024, 2, 14, 17, 0),
+    image: "../assets/imgs/events/deep-dive-into-rag.png",
+    type: "online",
+    attendees: 16,
+    category: "Hobbies and Passions",
+    distance: 50,
+  },
+
   {
     title: "INFJ Personality Type - Coffee Shop Meet & Greet",
     description: "Being an INFJ",
@@ -65,3 +147,5 @@ export const eventsStore = [
     distance: 15,
   },
 ];
+
+export default eventsStore;

@@ -11,6 +11,7 @@
   color: $mainWhite;
   font-size: inherit;
   width: fit-content;
+  height: 40px;
 
   &--cyan {
     background-color: $cyan;
@@ -18,5 +19,9 @@
 
   &--coral {
     background-color: $coral;
+  }
+
+  &--red {
+    background-color: $red;
   }
 }

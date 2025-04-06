@@ -34,7 +34,7 @@
         <div class="nav__controls">
           <button class="nav__language nav__btn" id="language">English</button>
           <button class="nav__logIn nav__btn" id="logIn">Log In</button>
-          <button class="nav__signUp button button--cyan" id="signUp">
+          <button class="nav__signUp button button--cyan" id="signUp--nav">
             Sign Up
           </button>
         </div>
@@ -49,19 +49,437 @@
             skill sharing, there are thousands of people who share it on Meetup.
             Events are happening every day—sign up to join the fun.
           </p>
-          <button class="header__button button button--cyan">
-            Join Meetup
-          </button>
+          <a href="/joinMeetup/">
+            <button class="header__button button button--cyan" id="joinMeetup">
+              Join Meetup
+            </button>
+          </a>
           <img
             src="./src/assets/imgs/header/header-deco.png"
-            alt="Decorative picture"
+            alt="Header decorative picture"
             class="header__deco"
           />
         </div>
       </div>
     </header>
-    <main class="pageMain__main main">
-      <section class="main__events events"></section>
+    <main class="mainPage__main">
+      <!-- <section class="main__events events">
+        <div class="container">
+          <div class="events__content">
+            <div class="events__block">
+              <div class="events__blockHeader">
+                <div>
+                  <h2 class="events__title title">Event</h2>
+                  <div>
+                    <div class="events__location">
+                      <input type="text" id="displayLocation" readonly />
+                      <button id="editLocation"></button>
+                    </div>
+                  </div>
+                </div>
+                <a href="/joinMeetup/">See all events</a>
+              </div>
+              <div class="events__blockContent">
+                <div class="card card--main">
+                  <img
+                    src="./src/assets/imgs/events/day-tranding-stategy.png"
+                    alt="Event image"
+                    class="card__img"
+                  />
+                  <div class="card__content">
+                    <h3 class="card__title">Day Trading Idea and Strategy</h3>
+                    <p class="card__description">
+                      Business
+                      <span class="card__distance">(5 km)</span>
+                    </p>
+                    <p class="card__date">Mon, Mar 18 · 7:00 PM PDT</p>
+                    <div class="card__meta">
+                      <p class="card__attendees">1 going</p>
+                      <p class="card__price">Free</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card card--main">
+                  <img
+                    src="./src/assets/imgs/events/lets-talk-networking.png"
+                    alt="Event image"
+                    class="card__img"
+                  />
+                  <div class="card__content">
+                    <h3 class="card__title">
+                      Let's Talk Networking: JPMorgan Chase in Palo Alto
+                    </h3>
+                    <p class="card__description">
+                      Business
+                      <span class="card__distance">(25 km)</span>
+                    </p>
+                    <p class="card__date">Tue, Mar 19 · 5:00 PM PDT</p>
+                    <div class="card__meta">
+                      <p class="card__attendees">41 going</p>
+                      <p class="card__price">Free</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card card--main">
+                  <img
+                    src="./src/assets/imgs/events/tech-talks.png"
+                    alt="Event image"
+                    class="card__img"
+                  />
+                  <div class="card__content">
+                    <h3 class="card__title">
+                      Tech Talks & Quiz: Next- Gen Database Solutions for
+                      Emerging Use Cases
+                    </h3>
+                    <p class="card__description">Technology</p>
+                    <p class="card__date">Wed, Mar 13 · 6:00 PM PDT</p>
+                    <div class="card__meta">
+                      <p class="card__attendees">40 going</p>
+                      <p class="card__price">Free</p>
+                    </div>
+                    <p class="card__type">Online Event</p>
+                  </div>
+                </div>
+                <div class="card card--main">
+                  <img
+                    src="./src/assets/imgs/events/informs-sf.png"
+                    alt="Event image"
+                    class="card__img"
+                  />
+                  <div class="card__content">
+                    <h3 class="card__title">
+                      INFORMS San Francisco Chapter In-Person Event
+                    </h3>
+                    <p class="card__description">
+                      Health and Wellbeing
+                      <span class="card__distance">(50 km)</span>
+                    </p>
+                    <p class="card__date">Thu, Mar 28 · 5:00 PM PDT</p>
+                    <div class="card__meta">
+                      <p class="card__attendees">41 going</p>
+                      <p class="card__price">Free</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card card--main">
+                  <img
+                    src="./src/assets/imgs/events/meet-and-greet.png"
+                    alt="Event image"
+                    class="card__img"
+                  />
+                  <div class="card__content">
+                    <h3 class="card__title">AI Wednesdays - Meet and Greet!</h3>
+                    <p class="card__description">
+                      Technology
+                      <span class="card__distance">(5 km)</span>
+                    </p>
+                    <p class="card__date">Wed, Mar 13 · 6:30 PM PDT</p>
+                    <div class="card__meta">
+                      <p class="card__attendees">29 going</p>
+                      <p class="card__price">Free</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card card--main">
+                  <img
+                    src="./src/assets/imgs/events/ros-by-the-bay.png"
+                    alt="Event image"
+                    class="card__img"
+                  />
+                  <div class="card__content">
+                    <h3 class="card__title">ROS By-The-Bay March 2024</h3>
+                    <p class="card__description">Social Activities</p>
+                    <p class="card__date">Thu, Mar 21 · 6:00 PM PDT</p>
+                    <div class="card__meta">
+                      <p class="card__attendees">51 going</p>
+                      <p class="card__price">Free</p>
+                    </div>
+                    <p class="card__type">Online Event</p>
+                  </div>
+                </div>
+                <div class="card card--main">
+                  <img
+                    src="./src/assets/imgs/events/christian-dinner.png"
+                    alt="Event image"
+                    class="card__img"
+                  />
+                  <div class="card__content">
+                    <h3 class="card__title">Free Christian Singles' Dinner</h3>
+                    <p class="card__description">
+                      Hobbies and Passions
+                      <span class="card__distance">(10 km)</span>
+                    </p>
+                    <p class="card__date">Fri, Mar 29 · 6:00 PM PDT</p>
+                    <div class="card__meta">
+                      <p class="card__attendees">11 going</p>
+                      <p class="card__price">Free</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card card--main">
+                  <img
+                    src="./src/assets/imgs/events/deep-dive-into-rag.png"
+                    alt="Event image"
+                    class="card__img"
+                  />
+                  <div class="card__content">
+                    <h3 class="card__title">
+                      In-person: Deep Dive into RAG Architectures (Food served)
+                    </h3>
+                    <p class="card__description">
+                      Hobbies and Passions
+                      <span class="card__distance">(50 km)</span>
+                    </p>
+                    <p class="card__date">Thu, Mar 14 · 5:00 PM PDT</p>
+                    <div class="card__meta">
+                      <p class="card__attendees">16 going</p>
+                      <p class="card__price">Free</p>
+                    </div>
+                  </div>
+                  <p class="card__type">Online Event</p>
+                </div>
+              </div>
+            </div>
+            <div class="events__block">
+              <div class="events__blockHeader">
+                <h2 class="events__title title">Upcoming online events</h2>
+                <a href="/joinMeetup/">See all events</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <section class="mainPage__joinMeetup joinMeetup">
+        <div class="container">
+          <div class="joinMeetup__content">
+            <div class="joinMeetup__grid">
+              <h2 class="joinMeetup__title title">Join Meetup</h2>
+              <p class="joinMeetup__text">
+                People use Meetup to meet new people, learn new things, find
+                support, get out of their comfort zones, and pursue their
+                passions, together. Membership is free.
+              </p>
+              <button
+                class="joinMeetup__button button button--red"
+                id="signUp--joinMeetup"
+              >
+                Sign up
+              </button>
+              <img
+                src="./src/assets/imgs/join-meetup/join-meetup.png"
+                alt="Join Meetup decorative picture"
+                class="joinMeetup__deco"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="mainPage__categories categories">
+        <div class="container">
+          <div class="categories__content">
+            <h2 class="categories__title title">Explore top categories</h2>
+            <div class="categories__grid">
+              <div class="categories__block">
+                <img
+                  src="./src/assets/icons/categories/travel-and-outdoor.svg"
+                  alt="Category image"
+                />
+                <h3>Travel and Outdoor</h3>
+              </div>
+              <div class="categories__block">
+                <img
+                  src="./src/assets/icons/categories/social-activities.svg"
+                  alt="Category image"
+                />
+                <h3>Social Activities</h3>
+              </div>
+              <div class="categories__block">
+                <img
+                  src="./src/assets/icons/categories/hobbies-and-passions.svg"
+                  alt="Category image"
+                />
+                <h3>Hobbies and Passions</h3>
+              </div>
+              <div class="categories__block">
+                <img
+                  src="./src/assets/icons/categories/sports-and-fitness.svg"
+                  alt="Category image"
+                />
+                <h3>Sports and Fitnesss</h3>
+              </div>
+              <div class="categories__block">
+                <img
+                  src="./src/assets/icons/categories/health-and-wellness.svg"
+                  alt="Category image"
+                />
+                <h3>Health and Wellbeing</h3>
+              </div>
+              <div class="categories__block">
+                <img
+                  src="./src/assets/icons/categories/technology.svg"
+                  alt="Category image"
+                />
+                <h3>Technology</h3>
+              </div>
+              <div class="categories__block">
+                <img
+                  src="./src/assets/icons/categories/art-and-culture.svg"
+                  alt="Category image"
+                />
+                <h3>Art and Culture</h3>
+              </div>
+              <div class="categories__block">
+                <img
+                  src="./src/assets/icons/categories/games.svg"
+                  alt="Category image"
+                />
+                <h3>Games</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="mainPage__cities cities">
+        <div class="container">
+          <div class="cities__content">
+            <h2 class="cities__title title">Popular cities on Meetup</h2>
+            <p class="cities__description">
+              Looking for fun things to do near you? See what Meetup organizers
+              are planning in cities around the country.
+            </p>
+            <div class="cities__grid">
+              <div class="cities__city">
+                <img
+                  src="./src/assets/imgs/cities/new-york.jpeg"
+                  alt="City image"
+                />
+                <h3>New York</h3>
+              </div>
+              <div class="cities__city">
+                <img
+                  src="./src/assets/imgs/cities/san-francisco.jpeg"
+                  alt="City image"
+                />
+                <h3>San Francisco</h3>
+              </div>
+              <div class="cities__city">
+                <img
+                  src="./src/assets/imgs/cities/chicago.jpeg"
+                  alt="City image"
+                />
+                <h3>Chicago</h3>
+              </div>
+              <div class="cities__city">
+                <img
+                  src="./src/assets/imgs/cities/nashville.jpeg"
+                  alt="City image"
+                />
+                <h3>Nashville</h3>
+              </div>
+              <div class="cities__city">
+                <img
+                  src="./src/assets/imgs/cities/miami.jpeg"
+                  alt="City image"
+                />
+                <h3>Miami</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="mainPage__howMeetupWorks howMeetupWorks">
+        <div class="container">
+          <div class="howMeetupWorks__content">
+            <h2 class="howMeetupWorks__title title">How Meetup works</h2>
+            <div class="howMeetupWorks__blocks">
+              <div class="howMeetupWorks__block">
+                <img
+                  src="./src/assets/icons/how-meetup-works/search-grey-blue.svg"
+                  alt="Logo from this block"
+                />
+                <div>
+                  <h3>Discover events and groups</h3>
+                  <p>
+                    See who's hosting local events for all the things you love
+                  </p>
+                  <a href="">Search events and groups </a>
+                </div>
+              </div>
+              <div class="howMeetupWorks__block">
+                <img
+                  src="./src/assets/icons/how-meetup-works/plus-grey-blue.svg"
+                  alt="Logo from this block"
+                />
+                <div>
+                  <h3>Start a group to host events</h3>
+                  <p>
+                    Create your own Meetup group, and draw from a community of
+                    millions
+                  </p>
+                  <a href="">Start a group </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="mainPage__friendships">
+        <div class="container">
+          <div class="friendships__content">
+            <h2 class="friendships__title title">
+              Friendships are made on Meetup
+            </h2>
+            <p class="friendships__description">
+              Since 2002, members have used Meetup to make new friends, meet
+              like-minded people, spend time on hobbies, and connect with locals
+              over shared interests. Learn how.
+            </p>
+            <div class="friendships__blocks">
+              <div class="friendships__block">
+                <img
+                  src="./src/assets/imgs/friendships/to-make-friends-at-brunch.jpeg"
+                  alt="I Used Meetup to Make Friends at Brunch image"
+                />
+                <h3>I Used Meetup to Make Friends at Brunch</h3>
+                <p>
+                  New Jersey-based writer and college student Brianna Stryker
+                  wanted to meet friends in her hometown. Learn how she used
+                  Meetup to make connections by joining a Girls Night Out Meetup
+                  group.
+                </p>
+                <a href="">Read more</a>
+              </div>
+              <div class="friendships__block">
+                <img
+                  src="./src/assets/imgs/friendships/turn-casual-connections-into-close-freindships.jpeg"
+                  alt="How to Turn Casual Connections into Close Friendships image"
+                />
+                <h3>How to Turn Casual Connections into Close Friendships</h3>
+                <p>
+                  It’s proven that close friendships are harder to make as an
+                  adult. But don’t sweat it: here’s what you can do to simplify
+                  the process.
+                </p>
+                <a href="">Read more</a>
+              </div>
+              <div class="friendships__block">
+                <img
+                  src="./src/assets/imgs/friendships/have-right-number-of-friends.jpeg"
+                  alt="Do You Have the “Right” Number of
+                  Friends? image"
+                />
+                <h3>Do You Have the “Right” Number of Friends?</h3>
+                <p>
+                  Studies from around the world have tried to help people answer
+                  this question. Learn about the three tiers of friendship and
+                  how to fulfill them.
+                </p>
+                <a href="">Read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
 </html>

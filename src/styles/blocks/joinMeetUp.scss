@@ -1,0 +1,113 @@
+@use "../utils/utils" as *;
+
+@mixin background {
+  background-color: $backgroundDeco;
+  border-radius: $borderRadius;
+}
+
+.joinMeetup {
+  @include background;
+
+  @include onTablet {
+    background-color: transparent;
+    border-radius: 0;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    padding-block: 16px 32px;
+
+    @include onTablet {
+      height: 256px;
+      padding: 0 20px;
+
+      @include background;
+    }
+
+    @include onDesktop {
+      padding: 20px 56px;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-areas:
+      "title"
+      "deco"
+      "text"
+      "button";
+
+    @include onTablet {
+      grid-template-areas:
+        "title deco"
+        "text deco"
+        "button deco";
+      grid-auto-rows: min-content;
+      column-gap: 16px;
+      row-gap: 16px;
+    }
+
+    @include onDesktop {
+      column-gap: 64px;
+    }
+
+    @include onLargeDesktop {
+      column-gap: 84px;
+    }
+  }
+
+  &__title {
+    grid-area: title;
+
+    @include onTablet {
+      margin-top: 16px;
+    }
+  }
+  &__text {
+    grid-area: text;
+    margin-bottom: 22px;
+    line-height: 1.5rem;
+    font-size: 0.8rem;
+
+    @include onTablet {
+      margin-bottom: 0;
+      font-size: 1rem;
+    }
+  }
+  &__button {
+    grid-area: button;
+    width: 192px;
+    justify-self: center;
+
+    @include transition;
+    @include hoverEffectBtn($red);
+    @include activeEffectBtn($red);
+
+    @include onTablet {
+      justify-self: unset;
+    }
+  }
+  &__deco {
+    grid-area: deco;
+    max-height: 136px;
+    max-width: 238px;
+    justify-self: center;
+    margin-bottom: 6px;
+
+    object-position: center;
+
+    @include onTablet {
+      max-height: 196px;
+      max-width: 250px;
+      justify-self: center;
+      margin-bottom: 0;
+      align-self: center;
+    }
+
+    @include onDesktop {
+      max-width: 340px;
+      align-self: flex-start;
+    }
+  }
+}

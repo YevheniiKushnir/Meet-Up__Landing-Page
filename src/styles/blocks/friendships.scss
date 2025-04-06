@@ -1,0 +1,88 @@
+@use "../utils/utils" as *;
+
+.friendships {
+  &__title {
+    margin-bottom: 28px;
+
+    @include onDesktop {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__description {
+    display: none;
+
+    @include onTablet {
+      display: block;
+      color: $grey;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      margin-bottom: 28px;
+    }
+
+    @include onDesktop {
+      width: 70%;
+    }
+  }
+
+  &__blocks {
+    display: grid;
+    row-gap: 32px;
+
+    @include onDesktop {
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 32px;
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+
+    img {
+      border-radius: $borderRadius;
+      margin-bottom: 24px;
+    }
+
+    h3 {
+      margin-bottom: 12px;
+      font-weight: bold;
+      line-height: 1.5rem;
+      font-size: 1rem;
+
+      @include onTablet {
+        font-size: 1.2rem;
+      }
+
+      @include onDesktop {
+        width: 95%;
+      }
+    }
+
+    p {
+      margin-bottom: 16px;
+      color: $grey;
+      font-size: 0.8rem;
+      line-height: 1.2rem;
+
+      @include onTablet {
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+    }
+
+    a {
+      font-size: 0.8rem;
+      color: $cyan;
+      line-height: 1.5rem;
+
+      width: max-content;
+      @include transition;
+      @include hoverEffectLink($cyan);
+
+      @include onTablet {
+        font-size: 1rem;
+      }
+    }
+  }
+}

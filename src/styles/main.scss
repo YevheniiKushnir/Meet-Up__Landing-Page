@@ -1,8 +1,16 @@
 @use "./utils/utils" as *;
 
-@use "./blocks/container.scss";
-@use "./blocks/mainPage.scss";
 @use "./blocks/button.scss";
+@use "./blocks/title.scss";
+@use "./blocks/container.scss";
+
+@use "./blocks/mainPage.scss";
 @use "./blocks/header.scss";
 @use "./blocks/nav.scss";
 @use "./blocks/events.scss";
+@use "./blocks/card.scss";
+@use "./blocks/joinMeetUp.scss";
+@use "./blocks/categories.scss";
+@use "./blocks/cities.scss";
+@use "./blocks/howMeetupWorks.scss";
+@use "./blocks/friendships.scss";

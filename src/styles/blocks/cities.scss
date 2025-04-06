@@ -1,0 +1,70 @@
+@use "../utils/utils" as *;
+
+.cities {
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+  }
+
+  &__description {
+    color: $grey;
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    margin-bottom: 8px;
+
+    @include onTablet {
+      font-size: 1rem;
+      margin-bottom: 28px;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(auto-fit, 154px);
+    justify-content: center;
+
+    & > *:nth-child(n + 5) {
+      display: none;
+    }
+
+    @include onTablet {
+      column-gap: 42px;
+
+      & > *:nth-child(n + 5) {
+        display: flex;
+      }
+    }
+
+    @include onLargeDesktop {
+      justify-content: flex-start;
+      grid-template-columns: repeat(auto-fit, 204px);
+    }
+  }
+
+  &__city {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+
+    img {
+      border-radius: 50%;
+      object-position: center;
+    }
+
+    h3 {
+      line-height: 1.2rem;
+      font-weight: bold;
+
+      @include onTablet {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+      }
+    }
+  }
+}

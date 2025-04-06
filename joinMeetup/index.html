@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meet Up</title>
+  </head>
+  <link rel="icon" href="../src/assets/icons/logo/meetup.svg" />
+  <link rel="stylesheet" href="../src/styles/main.css" />
+  <script src="../src/scripts/joinMeetUp.js" defer></script>
+  <body>
+    <nav class="header__nav nav">
+      <a href="/" class="nav__logo">
+        <img src="../src/assets/icons/logo/meetup.svg" alt="Meet Up Logo" />
+      </a>
+      <div class="nav__inputs">
+        <input
+          type="text"
+          id="inputEvent"
+          class="nav__search"
+          placeholder="Search events"
+          autocomplete="off"
+        />
+        <input
+          type="text"
+          id="inputCity"
+          class="nav__search"
+          value="Mountain View, CA"
+          autocomplete="off"
+        />
+        <button id="searchForEvents"></button>
+      </div>
+      <div class="nav__controls">
+        <button class="nav__language nav__btn" id="language">English</button>
+        <button class="nav__logIn nav__btn" id="logIn">Log In</button>
+        <button class="nav__signUp button button--cyan" id="signUp">
+          Sign Up
+        </button>
+      </div>
+    </nav>
+  </body>
+</html>

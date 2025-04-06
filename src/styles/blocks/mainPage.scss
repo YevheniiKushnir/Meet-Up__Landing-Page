@@ -8,4 +8,44 @@
       margin-bottom: 120px;
     }
   }
+
+  &__joinMeetup {
+    margin-bottom: 48px;
+
+    @include onDesktop {
+      margin-bottom: 64px;
+    }
+  }
+
+  &__categories {
+    margin-bottom: 48px;
+
+    @include onDesktop {
+      margin-bottom: 64px;
+    }
+  }
+
+  &__cities {
+    margin-bottom: 42px;
+
+    @include onDesktop {
+      margin-bottom: 64px;
+    }
+  }
+
+  &__howMeetupWorks {
+    margin-bottom: 18px;
+
+    @include onDesktop {
+      margin-bottom: 64px;
+    }
+  }
+
+  &__friendships {
+    margin-bottom: 120px;
+
+    @include onDesktop {
+      margin-bottom: 38px;
+    }
+  }
 }

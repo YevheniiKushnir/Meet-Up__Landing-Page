@@ -1,0 +1,114 @@
+@use "../utils/utils" as *;
+
+.events {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+
+    @include onDesktop {
+      gap: 100px;
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @include onDesktop {
+      gap: 24px;
+    }
+  }
+
+  &__blockHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & > div {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    & > a {
+      display: none;
+
+      @include hoverEffectLink($cyan);
+      @include onDesktop {
+        display: inline-block;
+        line-height: 1.5rem;
+        color: $cyan;
+      }
+    }
+  }
+
+  
+
+  &__location {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 8px 12px;
+    border-radius: $borderRadius;
+    height: $inputHeight;
+    width: 240px;
+    background-color: rgba(151, 202, 209, 0.12);
+    position: relative;
+
+    &::after {
+      content: "";
+      height: 2px;
+      width: 0;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: $cyan;
+      border-radius: 5px;
+      @include transition;
+    }
+
+    &.active {
+      &::after {
+        width: 100%;
+      }
+    }
+
+    input {
+      background-color: transparent;
+      color: $cyan;
+      width: 100%;
+
+      &[readonly] {
+        cursor: default;
+      }
+
+      @include onDesktop {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+      }
+    }
+
+    button {
+      height: 22px;
+      aspect-ratio: 1/1;
+      background-image: url("../assets/icons/events/edit.svg");
+      background-position: center;
+      background-size: contain;
+      background-color: transparent;
+    }
+  }
+
+  &__blockContent {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 96px;
+
+    @include onDesktop {
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 400px;
+      gap: 36px;
+    }
+  }
+}
