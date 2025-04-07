@@ -35,16 +35,15 @@
     & > a {
       display: none;
 
-      @include hoverEffectLink($cyan);
       @include onDesktop {
+        @include hoverEffectLink($cyan);
+
         display: inline-block;
         line-height: 1.5rem;
         color: $cyan;
       }
     }
   }
-
-  
 
   &__location {
     display: flex;

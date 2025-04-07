@@ -19,10 +19,6 @@
     @include onTablet {
       gap: 16px;
     }
-
-    @include onLargeDesktop {
-      justify-content: flex-start;
-    }
   }
 
   &__block {

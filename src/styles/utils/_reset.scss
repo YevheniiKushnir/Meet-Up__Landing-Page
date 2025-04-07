@@ -11,11 +11,15 @@
 a {
   color: initial;
   text-decoration: none;
+  cursor: pointer;
+  width: max-content;
+  color: inherit;
 }
 
 ul,
 ol {
   list-style: none;
+  cursor: default;
 }
 
 button {

@@ -80,9 +80,7 @@
     width: 192px;
     justify-self: center;
 
-    @include transition;
-    @include hoverEffectBtn($red);
-    @include activeEffectBtn($red);
+    @include effectButton--darken($red);
 
     @include onTablet {
       justify-self: unset;

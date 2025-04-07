@@ -1,0 +1,162 @@
+@use "../utils/utils" as *;
+
+@mixin hoverEffectLink1px {
+  @include hoverEffectLink($mainWhite);
+  &::after {
+    height: 1px;
+  }
+}
+
+.footer {
+  background-color: $mainBlack;
+  padding-block: 42px 36px;
+
+  @include onDesktop {
+    padding-block: 24px 40px;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $grey;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: bold;
+    padding-bottom: 24px;
+    margin-bottom: 34px;
+
+    @include onDesktop {
+      justify-content: flex-start;
+      gap: 38px;
+      margin-bottom: 24px;
+    }
+
+    h3 {
+      font-size: inherit;
+      line-height: inherit;
+      font-weight: inherit;
+      color: $whiteDeco;
+    }
+
+    button {
+      border: 1px solid $mainWhite;
+      background-color: transparent;
+      border-radius: $borderRadius;
+      width: 118px;
+      height: 44px;
+      font-size: inherit;
+      line-height: inherit;
+      font-weight: inherit;
+      color: $mainWhite;
+
+      @include effectButton--lighten($mainBlack);
+    }
+  }
+
+  &__lists {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    @include onDesktop {
+      margin-bottom: 42px;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+
+      li {
+        color: $greyDeco;
+        font-size: 0.8rem;
+        line-height: 1.2rem;
+
+        &:first-child {
+          color: $whiteDeco;
+          font-size: 1rem;
+          line-height: 1.5rem;
+        }
+
+        a {
+          @include hoverEffectLink1px;
+        }
+      }
+    }
+  }
+
+  &__socialMedias {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  &__followUs {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: $whiteDeco;
+    padding-bottom: 24px;
+
+    ul {
+      display: flex;
+      gap: 32px;
+
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  &__downloads {
+    display: none;
+
+    @include onTablet {
+      display: flex;
+      gap: 32px;
+      img {
+        width: 140px;
+        height: 40px;
+      }
+    }
+  }
+
+  &__legal {
+    display: flex;
+    gap: 24px;
+    color: $greyDeco;
+
+    li {
+      font-size: 0.8rem;
+      line-height: 1.2rem;
+
+      &:first-child {
+        color: $mainWhite;
+      }
+
+      &:not(&:first-child) {
+        display: none;
+      }
+
+      @include onDesktop {
+        &:not(&:first-child) {
+          display: unset;
+        }
+      }
+
+      a {
+        @include hoverEffectLink1px;
+      }
+    }
+  }
+}

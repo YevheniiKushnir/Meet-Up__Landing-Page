@@ -67,13 +67,11 @@
   &__button {
     grid-area: button;
     display: none;
-    @include transition;
 
     @include onTablet {
       display: flex;
     }
-    @include hoverEffectBtn($cyan);
-    @include activeEffectBtn($cyan);
+    @include effectButton--darken($cyan);
   }
 
   &__deco {

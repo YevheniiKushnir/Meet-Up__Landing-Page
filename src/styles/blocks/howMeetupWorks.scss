@@ -82,7 +82,6 @@
       font-size: 0.8rem;
       color: $cyan;
       width: max-content;
-      @include transition;
       @include hoverEffectLink($cyan);
 
       @include onTablet {

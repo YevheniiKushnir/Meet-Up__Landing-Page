@@ -7,19 +7,36 @@
   transition: $property $time $timing-function $delay;
 }
 
-@mixin hoverEffectBtn($color) {
+@mixin effectButton--darken($color) {
+  & {
+    @include transition;
+  }
   &:hover {
     background-color: darken($color, 10%);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   }
-}
-@mixin activeEffectBtn($color) {
   &:active {
     background-color: darken($color, 15%);
     transform: scale(0.95);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
 }
+
+@mixin effectButton--lighten($color) {
+  & {
+    @include transition;
+  }
+  &:hover {
+    background-color: lighten($color, 10%);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  &:active {
+    background-color: lighten($color, 15%);
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
 
 @mixin hoverEffectLink($color) {
   & {
