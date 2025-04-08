@@ -1,9 +1,9 @@
-const eventsStore = [
+export const eventsStore = [
   {
     title: "Day Trading Idea and Strategy",
     description: "Business",
-    date: new Date(2024, 2, 18, 19, 0), // Mar 18, 7:00 PM
-    image: "../assets/imgs/events/day-tranding-stategy.png",
+    date: new Date(2024, 2, 18, 19, 0),
+    image: "https://imgur.com/a/OFbTtOF",
     type: "offline",
     attendees: 1,
     category: "Business",
@@ -13,7 +13,7 @@ const eventsStore = [
     title: "Let's Talk Networking: JPMorgan Chase in Palo Alto",
     description: "Business",
     date: new Date(2024, 2, 19, 17, 0),
-    image: "../assets/imgs/events/lets-talk-networking.png",
+    image: "https://imgur.com/a/FczNXZ3",
     type: "offline",
     attendees: 41,
     category: "Business",
@@ -24,7 +24,7 @@ const eventsStore = [
       "Tech Talks & Quiz: Next- Gen Database Solutions for Emerging Use Cases",
     description: "Technology",
     date: new Date(2024, 2, 13, 18, 0),
-    image: "../assets/imgs/events/tech-talks.png",
+    image: "https://imgur.com/a/cjcadot",
     type: "online",
     attendees: 40,
     category: "Technology",
@@ -34,7 +34,7 @@ const eventsStore = [
     title: "INFORMS San Francisco Chapter In-Person Event",
     description: "Health and Wellbeing",
     date: new Date(2024, 2, 28, 17, 0),
-    image: "../assets/imgs/events/informs-sf.png",
+    image: "https://imgur.com/a/BQdCKSC",
     type: "offline",
     attendees: 41,
     category: "Health and Wellbeing",
@@ -44,7 +44,7 @@ const eventsStore = [
     title: "AI Wednesdays - Meet and Greet!",
     description: "Technology",
     date: new Date(2024, 2, 13, 18, 30),
-    image: "../assets/imgs/events/meet-and-greet.png",
+    image: "https://imgur.com/a/tcNhpjR",
     type: "offline",
     attendees: 29,
     category: "Technology",
@@ -54,7 +54,7 @@ const eventsStore = [
     title: "ROS By-The-Bay March 2024",
     description: "Social Activities",
     date: new Date(2024, 2, 21, 18, 0),
-    image: "../assets/imgs/events/ros-by-the-bay.png",
+    image: "https://imgur.com/a/O7Zyb7U",
     type: "online",
     attendees: 51,
     category: "Social Activities",
@@ -64,7 +64,7 @@ const eventsStore = [
     title: "Free Christian Singles' Dinner",
     description: "Hobbies and Passions",
     date: new Date(2024, 2, 29, 18, 0),
-    image: "../assets/imgs/events/christian-dinner.png",
+    image: "https://imgur.com/a/z1nTVyG",
     type: "offline",
     attendees: 11,
     category: "Hobbies and Passions",
@@ -74,7 +74,7 @@ const eventsStore = [
     title: "In-person: Deep Dive into RAG Architectures (Food served)",
     description: "Hobbies and Passions",
     date: new Date(2024, 2, 14, 17, 0),
-    image: "../assets/imgs/events/deep-dive-into-rag.png",
+    image: "https://imgur.com/a/EbYWKLl",
     type: "online",
     attendees: 16,
     category: "Hobbies and Passions",
@@ -147,5 +147,3 @@ const eventsStore = [
     distance: 15,
   },
 ];
-
-export default eventsStore;

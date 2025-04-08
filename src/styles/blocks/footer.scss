@@ -30,7 +30,7 @@
     padding-bottom: 24px;
     margin-bottom: 34px;
 
-    @include onDesktop {
+    @include onTablet {
       justify-content: flex-start;
       gap: 38px;
       margin-bottom: 24px;
@@ -114,6 +114,12 @@
       img {
         width: 30px;
         height: 30px;
+
+        @include transition;
+
+        &:hover {
+          transform: scale(1.2);
+        }
       }
     }
   }
@@ -127,6 +133,12 @@
       img {
         width: 140px;
         height: 40px;
+
+        @include transition;
+
+        &:hover {
+          transform: scale(1.1);
+        }
       }
     }
   }

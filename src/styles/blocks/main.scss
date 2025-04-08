@@ -1,14 +1,6 @@
 @use "../utils/utils" as *;
 
-.mainPage {
-  &__header {
-    margin-bottom: 24px;
-
-    @include onDesktop {
-      margin-bottom: 120px;
-    }
-  }
-
+.main {
   &__joinMeetup {
     margin-bottom: 48px;
 
@@ -38,14 +30,6 @@
 
     @include onDesktop {
       margin-bottom: 64px;
-    }
-  }
-
-  &__friendships {
-    margin-bottom: 120px;
-
-    @include onDesktop {
-      margin-bottom: 38px;
     }
   }
 }

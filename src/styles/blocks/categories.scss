@@ -32,6 +32,8 @@
     border-radius: $borderRadius;
     padding-top: 22px;
 
+    @include hoverEffectElement;
+
     img {
       height: 20px;
       width: 20px;

@@ -116,68 +116,36 @@ html {
   }
 }
 
-.mainPage__header {
-  margin-bottom: 24px;
-}
-@media (min-width: 1024px) {
-  .mainPage__header {
-    margin-bottom: 120px;
-  }
-}
-.mainPage__joinMeetup {
-  margin-bottom: 48px;
-}
-@media (min-width: 1024px) {
-  .mainPage__joinMeetup {
-    margin-bottom: 64px;
-  }
-}
-.mainPage__categories {
-  margin-bottom: 48px;
-}
-@media (min-width: 1024px) {
-  .mainPage__categories {
-    margin-bottom: 64px;
-  }
-}
-.mainPage__cities {
-  margin-bottom: 42px;
-}
-@media (min-width: 1024px) {
-  .mainPage__cities {
-    margin-bottom: 64px;
-  }
-}
-.mainPage__howMeetupWorks {
-  margin-bottom: 18px;
-}
-@media (min-width: 1024px) {
-  .mainPage__howMeetupWorks {
-    margin-bottom: 64px;
-  }
-}
-.mainPage__friendships {
-  margin-bottom: 120px;
-}
-@media (min-width: 1024px) {
-  .mainPage__friendships {
-    margin-bottom: 38px;
-  }
-}
-
-.header__nav {
+.page__nav {
   margin-bottom: 30px;
 }
 @media (min-width: 768px) {
-  .header__nav {
+  .page__nav {
     margin-bottom: 60px;
   }
 }
 @media (min-width: 1024px) {
-  .header__nav {
+  .page__nav {
     margin-bottom: 88px;
   }
 }
+.page__header {
+  margin-bottom: 24px;
+}
+@media (min-width: 1024px) {
+  .page__header {
+    margin-bottom: 120px;
+  }
+}
+.page__main {
+  margin-bottom: 120px;
+}
+@media (min-width: 1024px) {
+  .page__main {
+    margin-bottom: 38px;
+  }
+}
+
 .header__content {
   display: grid;
   grid-template-areas: "title" "text" "button" "deco";
@@ -226,14 +194,12 @@ html {
 .header__button {
   grid-area: button;
   display: none;
+  transition: all 0.3s ease 0s;
 }
 @media (min-width: 768px) {
   .header__button {
     display: flex;
   }
-}
-.header__button {
-  transition: all 0.3s ease 0s;
 }
 .header__button:hover {
   background-color: rgb(0, 76.2826086957, 87);
@@ -345,15 +311,13 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s ease 0s;
 }
 .nav__inputs button::after {
   content: "";
   height: 20px;
   aspect-ratio: 1/1;
   background-image: url("../assets/icons/nav/search-white.svg");
-}
-.nav__inputs button {
-  transition: all 0.3s ease 0s;
 }
 .nav__inputs button:hover {
   background-color: rgb(243.3920454545, 39.6079545455, 39.6079545455);
@@ -387,23 +351,6 @@ html {
   font-size: inherit;
   background-color: transparent;
 }
-.nav__btn {
-  position: relative;
-}
-.nav__btn::after {
-  content: "";
-  height: 2px;
-  width: 0;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background-color: #00798a;
-  border-radius: 5px;
-  transition: all 0.3s ease 0s;
-}
-.nav__btn:hover::after {
-  width: 100%;
-}
 .nav__language {
   gap: 4px;
 }
@@ -415,10 +362,64 @@ html {
   background-position: center;
   background-size: contain;
 }
-.nav__signUp {
-  height: 36px;
+.nav__changeLanguage {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.nav__changeLanguage ul {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  width: max-content;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+  visibility: hidden;
+  z-index: 2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+}
+.nav__changeLanguage ul li {
+  padding: 6px 12px;
+  border-bottom: 2px solid #00798a;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.nav__changeLanguage ul li:hover {
+  background-color: #00798a;
+  color: #fff;
+}
+.nav__changeLanguage ul.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  visibility: visible;
+}
+.nav__changeLanguage button {
+  height: 100%;
+}
+.nav__logIn {
+  position: relative;
+}
+.nav__logIn::after {
+  content: "";
+  height: 2px;
+  width: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #00798a;
+  border-radius: 5px;
+  transition: all 0.3s ease 0s;
+}
+.nav__logIn:hover::after {
+  width: 100%;
 }
 .nav__signUp {
+  height: 36px;
   transition: all 0.3s ease 0s;
 }
 .nav__signUp:hover {
@@ -429,6 +430,39 @@ html {
   background-color: rgb(0, 53.9239130435, 61.5);
   transform: scale(0.95);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.main__joinMeetup {
+  margin-bottom: 48px;
+}
+@media (min-width: 1024px) {
+  .main__joinMeetup {
+    margin-bottom: 64px;
+  }
+}
+.main__categories {
+  margin-bottom: 48px;
+}
+@media (min-width: 1024px) {
+  .main__categories {
+    margin-bottom: 64px;
+  }
+}
+.main__cities {
+  margin-bottom: 42px;
+}
+@media (min-width: 1024px) {
+  .main__cities {
+    margin-bottom: 64px;
+  }
+}
+.main__howMeetupWorks {
+  margin-bottom: 18px;
+}
+@media (min-width: 1024px) {
+  .main__howMeetupWorks {
+    margin-bottom: 64px;
+  }
 }
 
 .events__content {
@@ -466,12 +500,10 @@ html {
 }
 @media (min-width: 1024px) {
   .events__blockHeader > a {
+    position: relative;
     display: inline-block;
     line-height: 1.5rem;
     color: #00798a;
-  }
-  .events__blockHeader > a {
-    position: relative;
   }
   .events__blockHeader > a::after {
     content: "";
@@ -538,7 +570,7 @@ html {
 .events__blockContent {
   display: grid;
   grid-auto-columns: 1fr;
-  grid-auto-rows: 96px;
+  gap: 20px;
 }
 @media (min-width: 1024px) {
   .events__blockContent {
@@ -552,10 +584,11 @@ html {
   display: flex;
   gap: 8px;
   border-top: 1px solid #d9d9d9;
-  padding-block: 10px;
+  padding-top: 10px;
   position: relative;
   line-height: 0.75rem;
   font-size: 0.5rem;
+  transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
 @media (min-width: 1024px) {
@@ -588,7 +621,6 @@ html {
 @media (min-width: 1024px) {
   .card__content {
     gap: 8px;
-    width: 80%;
     grid-template-areas: "title" "description" "date" "attendees";
   }
 }
@@ -654,8 +686,12 @@ html {
     line-height: 1.5rem;
   }
 }
+.card__attendees {
+  margin-top: 18px;
+}
 @media (min-width: 1024px) {
   .card__attendees {
+    margin-top: 0;
     display: flex;
     align-items: center;
     gap: 6px;
@@ -693,15 +729,28 @@ html {
 .card__type {
   position: relative;
   grid-area: type;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #fff;
+  color: #707070;
+  gap: 3px;
+}
+.card__type::before {
+  content: "";
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background-image: url("../assets/icons/events/online.svg");
+  background-position: center;
+  background-size: contain;
+}
+.card__type::before {
+  width: 10px;
+  height: 10px;
 }
 @media (min-width: 1024px) {
   .card__type {
-    display: flex;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    background-color: #fff;
-    color: #707070;
     height: 20px;
     width: 106px;
     position: absolute;
@@ -709,16 +758,29 @@ html {
     line-height: 1rem;
     top: 5px;
     left: 10px;
+    gap: 6px;
   }
   .card__type::before {
-    content: "";
-    display: inline-block;
-    height: 20px;
     width: 20px;
-    background-image: url("../assets/icons/events/online.svg");
-    background-position: center;
-    background-size: contain;
+    height: 20px;
   }
+}
+.card--horizontal {
+  display: flex;
+  gap: 8px;
+  border-top: 1px solid #d9d9d9;
+  padding-top: 10px;
+  position: relative;
+  line-height: 0.75rem;
+  font-size: 0.5rem;
+}
+.card--horizontal .card__content {
+  flex: 1;
+  display: grid;
+  grid-auto-flow: row;
+  grid-auto-rows: min-content;
+  gap: 2px;
+  grid-template-areas: "date" "title" "description" "type" "attendees";
 }
 
 .joinMeetup {
@@ -795,8 +857,6 @@ html {
   grid-area: button;
   width: 192px;
   justify-self: center;
-}
-.joinMeetup__button {
   transition: all 0.3s ease 0s;
 }
 .joinMeetup__button:hover {
@@ -865,6 +925,14 @@ html {
   background-color: rgba(151, 202, 209, 0.08);
   border-radius: 8px;
   padding-top: 22px;
+  transition: all 0.3s ease 0s;
+}
+.categories__block, .categories__block * {
+  cursor: pointer;
+}
+.categories__block:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 .categories__block img {
   height: 20px;
@@ -924,10 +992,22 @@ html {
   flex-direction: column;
   align-items: center;
   gap: 18px;
+  border-radius: 8px;
 }
-.cities__city img {
+.cities__city a {
+  width: 100%;
+}
+.cities__city a img {
   border-radius: 50%;
   object-position: center;
+  transition: all 0.3s ease 0s;
+}
+.cities__city a img, .cities__city a img * {
+  cursor: pointer;
+}
+.cities__city a img:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 .cities__city h3 {
   line-height: 1.2rem;
@@ -1024,8 +1104,6 @@ html {
   font-size: 0.8rem;
   color: #00798a;
   width: max-content;
-}
-.howMeetupWorks__block a {
   position: relative;
 }
 .howMeetupWorks__block a::after {
@@ -1103,11 +1181,6 @@ html {
     font-size: 1.2rem;
   }
 }
-@media (min-width: 1024px) {
-  .friendships__block h3 {
-    width: 95%;
-  }
-}
 .friendships__block p {
   margin-bottom: 16px;
   color: #707070;
@@ -1125,8 +1198,6 @@ html {
   color: #00798a;
   line-height: 1.5rem;
   width: max-content;
-}
-.friendships__block a {
   position: relative;
 }
 .friendships__block a::after {
@@ -1173,7 +1244,7 @@ html {
   padding-bottom: 24px;
   margin-bottom: 34px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .footer__title {
     justify-content: flex-start;
     gap: 38px;
@@ -1196,8 +1267,6 @@ html {
   line-height: inherit;
   font-weight: inherit;
   color: #fff;
-}
-.footer__title button {
   transition: all 0.3s ease 0s;
 }
 .footer__title button:hover {
@@ -1277,6 +1346,10 @@ html {
 .footer__followUs ul img {
   width: 30px;
   height: 30px;
+  transition: all 0.3s ease 0s;
+}
+.footer__followUs ul img:hover {
+  transform: scale(1.2);
 }
 .footer__downloads {
   display: none;
@@ -1289,6 +1362,10 @@ html {
   .footer__downloads img {
     width: 140px;
     height: 40px;
+    transition: all 0.3s ease 0s;
+  }
+  .footer__downloads img:hover {
+    transform: scale(1.1);
   }
 }
 .footer__legal {

@@ -130,7 +130,6 @@
     align-items: center;
     font-size: inherit;
     background-color: transparent;
-    @include hoverEffectLink($cyan);
   }
 
   &__language {
@@ -144,6 +143,55 @@
       background-position: center;
       background-size: contain;
     }
+  }
+
+  &__changeLanguage {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    ul {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background-color: $mainWhite;
+      width: max-content;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(-20px);
+      pointer-events: none;
+      visibility: hidden;
+      z-index: 2;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      @include transition;
+
+      li {
+        padding: 6px 12px;
+        border-bottom: 2px solid $cyan;
+        cursor: pointer;
+        white-space: nowrap;
+
+        &:hover {
+          background-color: $cyan;
+          color: $mainWhite;
+        }
+      }
+
+      &.active {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+        visibility: visible;
+      }
+    }
+
+    button {
+      height: 100%;
+    }
+  }
+
+  &__logIn {
+    @include hoverEffectLink($cyan);
   }
 
   &__signUp {

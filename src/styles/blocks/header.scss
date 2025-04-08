@@ -1,18 +1,6 @@
 @use "../utils/utils" as *;
 
 .header {
-  &__nav {
-    margin-bottom: 30px;
-
-    @include onTablet {
-      margin-bottom: 60px;
-    }
-
-    @include onDesktop {
-      margin-bottom: 88px;
-    }
-  }
-
   &__content {
     display: grid;
     grid-template-areas:

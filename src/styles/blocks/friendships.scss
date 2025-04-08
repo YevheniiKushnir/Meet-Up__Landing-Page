@@ -53,10 +53,6 @@
       @include onTablet {
         font-size: 1.2rem;
       }
-
-      @include onDesktop {
-        width: 95%;
-      }
     }
 
     p {

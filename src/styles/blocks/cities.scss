@@ -50,10 +50,16 @@
     flex-direction: column;
     align-items: center;
     gap: 18px;
+    border-radius: $borderRadius;
 
-    img {
-      border-radius: 50%;
-      object-position: center;
+    a {
+      width: 100%;
+
+      img {
+        border-radius: 50%;
+        object-position: center;
+        @include hoverEffectElement;
+      }
     }
 
     h3 {
