@@ -151,6 +151,7 @@
     position: relative;
 
     ul {
+      width: 100%;
       position: absolute;
       top: 100%;
       right: 0;
@@ -175,9 +176,13 @@
           background-color: $cyan;
           color: $mainWhite;
         }
+
+        &.current {
+          display: none;
+        }
       }
 
-      &.active {
+      &.showList {
         opacity: 1;
         transform: translateY(0);
         pointer-events: auto;

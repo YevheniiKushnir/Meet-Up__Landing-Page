@@ -1,7 +1,7 @@
-export function Nav(parentClass = "") {
+export function Nav(parentClass = "", url) {
   return `
     <nav class="${parentClass} nav">
-      <a href="/" class="nav__logo">
+      <a href=${url} class="nav__logo" id="Logo">
         <img src="./src/assets/icons/logo/meetup.svg" alt="Meet Up Logo" />
       </a>
       <div class="nav__inputs">
@@ -22,7 +22,7 @@ export function Nav(parentClass = "") {
         <button id="searchForEvents"></button>
         </div>
       <div class="nav__controls">
-        <div class="nav__changeLanguage">
+        <div class="nav__changeLanguage dropDown">
           <button class="nav__language nav__btn" id="language">
             English
           </button>

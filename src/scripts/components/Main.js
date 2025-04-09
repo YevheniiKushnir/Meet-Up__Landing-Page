@@ -1,11 +1,12 @@
 import { categoryList } from "../../assets/data/categoryList.js";
 import { cityList } from "../../assets/data/cityList.js";
+import { eventsStore } from "../../assets/data/eventsStore.js";
 import { Card } from "./Card.js";
 
-export function Main(parentClass = "") {
+export function Main(parentClass = "", url) {
   return `
     <main class="${parentClass} main">
-    ${events("main__events")}
+    ${events("main__events", url)}
     ${joinMeetup("main__joinMeetup")}
     ${categories("main__categories")}
     ${cities("main__cities")}
@@ -15,7 +16,7 @@ export function Main(parentClass = "") {
   `;
 }
 
-function events(parentClass = "") {
+function events(parentClass = "", url) {
   return `
     <section class="${parentClass} events">
       <div class="container">
@@ -31,19 +32,64 @@ function events(parentClass = "") {
                   </div>
                 </div>
               </div>
-              <a href="/joinMeetup/">See all events</a>
+              <a href=${url}>See all events</a>
             </div>
             <div class="events__blockContent">
-              /////////////
+              ${eventsStore
+                .slice(0, 8)
+                .map(
+                  ({
+                    image,
+                    title,
+                    category,
+                    type,
+                    date,
+                    distance,
+                    attendees,
+                  }) => `
+                  ${Card(
+                    image,
+                    title,
+                    category,
+                    type,
+                    date,
+                    distance,
+                    attendees
+                  )}
+                `
+                )
+                .join("")}
             </div>
             <div class="events__block">
               <div class="events__blockHeader">
                 <h2 class="events__title title">Upcoming online events</h2>
-                <a href="/joinMeetup/">See all events</a>
+                <a href=${url}>See all events</a>
               </div>
               <div class="events__blockContent">
-
-              /////////////
+              ${eventsStore
+                .slice(8, 12)
+                .map(
+                  ({
+                    image,
+                    title,
+                    category,
+                    type,
+                    date,
+                    distance,
+                    attendees,
+                  }) => `
+                  ${Card(
+                    image,
+                    title,
+                    category,
+                    type,
+                    date,
+                    distance,
+                    attendees
+                  )}
+                `
+                )
+                .join("")}
               </div>
             </div>
           </div>

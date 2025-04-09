@@ -1,6 +1,14 @@
 @use "../utils/utils" as *;
 
 .main {
+  &__events {
+    margin-bottom: 54px;
+
+    @include onDesktop {
+      margin-bottom: 40px;
+    }
+  }
+
   &__joinMeetup {
     margin-bottom: 48px;
 
