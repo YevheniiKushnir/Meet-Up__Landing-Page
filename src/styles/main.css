@@ -490,12 +490,7 @@ html {
 .events__block {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-}
-@media (min-width: 1024px) {
-  .events__block {
-    gap: 24px;
-  }
+  gap: 24px;
 }
 .events__blockHeader {
   display: flex;
@@ -646,6 +641,12 @@ html {
   width: 98px;
   border-radius: 5px;
 }
+@media (min-width: 768px) {
+  .card img {
+    width: 180px;
+    height: 80px;
+  }
+}
 @media (min-width: 1024px) {
   .card img {
     width: 100%;
@@ -661,8 +662,8 @@ html {
 }
 @media (min-width: 1024px) {
   .card__title {
-    line-height: 1.5rem;
     font-size: 1.2rem;
+    line-height: 1.5rem;
   }
 }
 .card__description {
@@ -781,22 +782,58 @@ html {
     height: 20px;
   }
 }
-.card--horizontal {
-  display: flex;
-  gap: 8px;
-  border-top: 1px solid #d9d9d9;
-  padding-top: 10px;
-  position: relative;
-  line-height: 0.75rem;
-  font-size: 0.5rem;
+@media (min-width: 1024px) {
+  .card--horizontal {
+    flex-direction: row;
+    border-radius: unset;
+    padding-top: 16px;
+    border-top: 1px solid #d9d9d9;
+    max-height: unset;
+  }
 }
-.card--horizontal .card__content {
-  flex: 1;
-  display: grid;
-  grid-auto-flow: row;
-  grid-auto-rows: min-content;
-  gap: 2px;
-  grid-template-areas: "date" "title" "description" "type" "attendees";
+@media (min-width: 1024px) {
+  .card--horizontal .card__content {
+    gap: 2px;
+    grid-template-areas: "date" "title" "description" "type" "attendees";
+  }
+}
+@media (min-width: 1024px) {
+  .card--horizontal .card__title {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .card--horizontal .card__date {
+    color: #7c6f50;
+  }
+  .card--horizontal .card__date::before {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
+  .card--horizontal .card__type {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .card--horizontal .card__attendees {
+    margin-top: 18px;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    color: #707070;
+  }
+  .card--horizontal .card__attendees::before {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
+  .card--horizontal img {
+    width: 160px;
+    height: auto;
+  }
 }
 
 .joinMeetup {
@@ -1433,8 +1470,12 @@ html {
 @media (min-width: 1024px) {
   .main2__content {
     grid-template-columns: 1fr auto;
-    column-gap: 260px;
     grid-template-areas: "title map" "subtitle map" "sortedParam map" "cards map";
+  }
+}
+@media (min-width: 1440px) {
+  .main2__content {
+    column-gap: 260px;
   }
 }
 .main2__title {
@@ -1452,7 +1493,7 @@ html {
 }
 .main2__sortedParam {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 18px;
   margin-bottom: 40px;
   grid-area: sortedParam;
@@ -1574,6 +1615,14 @@ html {
 }
 .main2__cards {
   grid-area: cards;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media (min-width: 1024px) {
+  .main2__cards {
+    gap: 16px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

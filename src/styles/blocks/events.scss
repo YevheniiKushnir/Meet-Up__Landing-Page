@@ -14,11 +14,7 @@
   &__block {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-
-    @include onDesktop {
-      gap: 24px;
-    }
+    gap: 24px;
   }
 
   &__blockHeader {
