@@ -121,6 +121,7 @@ html {
   border-bottom: 2px solid #00798a;
   cursor: pointer;
   white-space: nowrap;
+  font-size: inherit;
 }
 .dropDown ul li:hover {
   background-color: #00798a;
@@ -403,49 +404,6 @@ html {
   background-image: url("../assets/icons/nav/languagesGlobus.svg");
   background-position: center;
   background-size: contain;
-}
-.nav__changeLanguage {
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-.nav__changeLanguage ul {
-  width: 100%;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background-color: #fff;
-  width: max-content;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(-20px);
-  pointer-events: none;
-  visibility: hidden;
-  z-index: 2;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease 0s;
-}
-.nav__changeLanguage ul li {
-  padding: 6px 12px;
-  border-bottom: 2px solid #00798a;
-  cursor: pointer;
-  white-space: nowrap;
-}
-.nav__changeLanguage ul li:hover {
-  background-color: #00798a;
-  color: #fff;
-}
-.nav__changeLanguage ul li.current {
-  display: none;
-}
-.nav__changeLanguage ul.showList {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-  visibility: visible;
-}
-.nav__changeLanguage button {
-  height: 100%;
 }
 .nav__logIn {
   position: relative;
@@ -1501,16 +1459,21 @@ html {
 }
 @media (min-width: 768px) {
   .main2__sortedParam {
+    flex-direction: row;
     margin-bottom: 56px;
   }
+}
+.main2__customSelect {
+  font-size: 0.8rem;
+  line-height: 0.8rem;
 }
 .main2__customSelect button {
   padding: 16px 42px 16px 16px;
   background-color: #f6f7f8;
   border-radius: 40px;
   position: relative;
-  font-size: 0.8rem;
-  line-height: 0.8rem;
+  font-size: inherit;
+  line-height: inherit;
   color: #212121;
 }
 .main2__customSelect button::after {
@@ -1525,6 +1488,9 @@ html {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+}
+.main2__customSelect button:disabled {
+  opacity: 0.5;
 }
 .main2__map {
   display: none;

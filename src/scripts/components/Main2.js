@@ -1,4 +1,7 @@
-export function Main2(parentClass = '') {
+import { eventsStore } from "../../assets/data/eventsStore.js";
+import { Card } from "./Card.js";
+
+export function Main2(parentClass = "") {
   return `
     <main main class="${parentClass} main2">
       <div class="container">
@@ -18,13 +21,9 @@ export function Main2(parentClass = '') {
               <button id="selectDistance">Any distance</button>
               <ul>
                 <li data-value="any">Any distance</li>
-                <li data-value="5">5 km</li>
-                <li data-value="10">10 km</li>
-                <li data-value="15">15 km</li>
-                <li data-value="25">25 km</li>
-                <li data-value="50">50 km</li>
-                <li data-value="75">75 km</li>
-                <li data-value="100">100 km</li>
+                <li data-value="[0, 25]">0 - 25 km</li>
+                <li data-value="[25, 50]">25 - 50 km</li>
+                <li data-value="[50, 100]">50 - 100 km</li>
               </ul>
             </div>
             <div class="main2__customSelect dropDown">
@@ -39,7 +38,32 @@ export function Main2(parentClass = '') {
               </ul>
             </div>
           </div>
-          <div class="main2__cards"></div>
+          <div class="main2__cards">
+            ${eventsStore
+              .map(
+                ({
+                  image,
+                  title,
+                  category,
+                  type,
+                  date,
+                  distance,
+                  attendees,
+                }) => `
+                  ${Card(
+                    image,
+                    title,
+                    category,
+                    type,
+                    date,
+                    distance,
+                    attendees,
+                    "card--horizontal"
+                  )}
+                `
+              )
+              .join("")}
+          </div>
           <div class="main2__map">
             <div class="main2__eventsNear">
               <p>Find events near</p>
@@ -70,5 +94,5 @@ export function Main2(parentClass = '') {
         </div>
       </div>
     </main>
-  `
+  `;
 }

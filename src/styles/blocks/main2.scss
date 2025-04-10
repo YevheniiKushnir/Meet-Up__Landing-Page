@@ -45,18 +45,21 @@
     grid-area: sortedParam;
 
     @include onTablet {
+      flex-direction: row;
       margin-bottom: 56px;
     }
   }
 
   &__customSelect {
+    font-size: 0.8rem;
+    line-height: 0.8rem;
     button {
       padding: 16px 42px 16px 16px;
       background-color: $whiteDeco;
       border-radius: 40px;
       position: relative;
-      font-size: 0.8rem;
-      line-height: 0.8rem;
+      font-size: inherit;
+      line-height: inherit;
       color: $mainBlack;
 
       &::after {
@@ -71,6 +74,10 @@
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
+      }
+
+      &:disabled {
+        opacity: 0.5;
       }
     }
   }
